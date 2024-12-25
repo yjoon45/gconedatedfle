@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :focus {
+    outline: dotted 3px theme('colors.slate.800');
+    outline-offset: 3px;
+  }
+  @font-face {
+    font-family: 'Bauer Bodoni BT';
+    src: url('../fonts/BauerBodoniBT-Bold.svg#BauerBodoniBT-Bold') format('svg'),
+      url('../fonts/BauerBodoniBT-Bold.ttf') format('truetype'),
+      url('../fonts/BauerBodoniBT-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  html {
+    font-size: 16px;
+  }
+}
+
+@layer components {
+  .gcod-accordion {
+    & > summary {
+      @apply gcod-appearance-none gcod-cursor-pointer;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+  }
+  .gcod-accordion-caret {
+    @apply gcod-w-8 gcod-h-8 gcod-rounded-full -gcod-col-start-1;
+
+    background: theme('colors.orange.500')
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/></svg>')
+      no-repeat center/30px;
+  }
+
+  .gcod-accordion[open] .gcod-accordion-caret {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-dash" viewBox="0 0 16 16"><path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/></svg>');
+  }
+}
