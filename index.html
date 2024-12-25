@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/@pqina/flip/dist/flip.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Rmove this after development -->
     <link
@@ -51,7 +55,7 @@
     <title>One Date - GirlsChase</title>
   </head>
   <body>
-    <header class="gcod-my-8">
+    <header class="lg:gcod-my-8 gcod-my-4">
       <img
         width="233"
         height="65"
@@ -60,13 +64,14 @@
         alt="Girls Chase"
       />
     </header>
+
     <main class="lg:gcod-space-y-16 gcod-space-y-8 lg:gcod-mb-16 gcod-mb-8">
       <section class="gcod-container">
         <h1 class="gcod-my-5">
           <img
             width="824"
             height="599"
-            class="gcod-mx-auto gcod-translate-x-[8.7%]"
+            class="gcod-mx-auto lg:gcod-translate-x-[8.7%]"
             src="images/gcod-img-3828.jpg"
             alt="the one date winter of romance"
           />
@@ -101,7 +106,7 @@
       </section>
 
       <section
-        class="gcod-max-w-screen-lg gcod-mx-auto gcod-grid gcod-grid-cols-[1fr_1px_1fr] gcod-gap-14"
+        class="gcod-container gcod-max-w-screen-lg gcod-mx-auto gcod-grid gcod-grid-cols-1 lg:gcod-grid-cols-[1fr_1px_1fr] lg:gcod-gap-14 gcod-gap-7"
       >
         <div class="gcod-text-center gcod-space-y-5">
           <img
@@ -159,7 +164,7 @@
           <button
             data-iframe-trigger
             type="button"
-            class="gcod-absolute gcod-top-0 gcod-left-0 gcod-w-full gcod-h-full gcod-p-4"
+            class="gcod-absolute gcod-top-0 gcod-left-0 gcod-w-full gcod-h-full lg:gcod-p-4 gcod-p-1"
           >
             <span class="gcod-sr-only">Play Video</span>
             <img
@@ -205,7 +210,30 @@
           <span class="gcod-text-orange-500">“Winter of Romance”</span> ends at
           Midnight, <span class="gcod-text-orange-500">January 4th</span>
         </p>
-        [timer]
+
+        <div
+          class="tick lg:gcod-my-5 gcod-my-3 gcod-font-sans"
+          data-did-init="handleTickInit"
+        >
+          <div
+            data-repeat="true"
+            data-layout="horizontal fit"
+            data-transform="preset(d, h, m, s) -> delay"
+          >
+            <div class="tick-group">
+              <div
+                data-key="value"
+                data-repeat="true"
+                data-transform="pad(00) -> split -> delay"
+              >
+                <span data-view="flip"></span>
+              </div>
+
+              <span data-key="label" data-view="text" class="tick-label"></span>
+            </div>
+          </div>
+        </div>
+
         <p class="gcod-text-center gcod-text-xl gcod-font-sans">
           If you haven’t picked up One Date at this remarkable price of 30% off
           PLUS the two Limited Edition Date Flows by then, you won’t be able to
@@ -227,10 +255,13 @@
           class="gcod-block gcod-font-sans gcod-mx-auto gcod-text-center gcod-w-full gcod-max-w-[700px] gcod-bg-[#13cb17] hover:gcod-bg-[#10b512] focus:gcod-bg-[#10b512] hover:gcod-text-white hover:gcod-no-underline gcod-text-white gcod-rounded-[50px] gcod-py-2 gcod-px-5 focus:gcod-text-white focus:gcod-no-underline"
         >
           <div class="gcod-flex gcod-flex-col">
-            <span class="gcod-text-3xl gcod-font-bold gcod-tracking-wide"
+            <span
+              class="lg:gcod-text-3xl gcod-text-2xl gcod-font-bold gcod-tracking-wide"
               >REGISTER HERE</span
             >
-            <span class="gcod-text-lg">IF YOU'RE A ONE DATE OWNER ALREADY</span>
+            <span class="lg:gcod-text-lg gcod-text-base"
+              >IF YOU'RE A ONE DATE OWNER ALREADY</span
+            >
           </div>
         </a>
       </section>
@@ -247,7 +278,7 @@
           4th
         </p>
         <p
-          class="gcod-text-center gcod-font-serif gcod-uppercase gcod-text-6xl"
+          class="gcod-text-center gcod-font-serif gcod-uppercase lg:gcod-text-6xl gcod-text-5xl"
         >
           this deal ends forever
         </p>
@@ -255,7 +286,7 @@
 
       <section class="gcod-container">
         <h2
-          class="gcod-text-center gcod-relative gcod-isolate gcod-font-serif gcod-text-6xl gcod-text-orange-500"
+          class="gcod-text-center gcod-relative gcod-isolate gcod-font-serif gcod-text-6xl gcod-text-orange-500 lg:gcod-mb-0 gcod-mb-20"
         >
           FAQ
           <span
@@ -377,9 +408,11 @@
     </main>
 
     <footer
-      class="gcod-container gcod-border-t gcod-border-gray-300 gcod-py-5 gcod-grid gcod-grid-cols-2"
+      class="gcod-container gcod-border-t gcod-border-gray-300 gcod-py-5 gcod-grid lg:gcod-grid-cols-2 gcod-grid-cols-1 gcod-gap-2"
     >
-      <div class="gcod-font-sans gcod-text-base gcod-text-orange-500">
+      <div
+        class="gcod-font-sans gcod-text-base gcod-text-orange-500 lg:gcod-text-left gcod-text-center"
+      >
         <button
           data-modal-trigger
           data-modal-target="privacy-modal"
@@ -404,7 +437,9 @@
           Support
         </button>
       </div>
-      <p class="gcod-font-sans gcod-text-sm gcod-text-gray-600 gcod-text-right">
+      <p
+        class="gcod-font-sans gcod-text-sm gcod-text-gray-600 gcod-text-center lg:gcod-text-right"
+      >
         © 2008 - 2024 Girls Chase Inc.
       </p>
     </footer>
@@ -568,6 +603,62 @@
       </div>
     </dialog>
 
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      function handleTickInit(tick) {
+        // uncomment to set labels to different language
+        /*
+              var locale = {
+                  YEAR_PLURAL: 'Jaren',
+                  YEAR_SINGULAR: 'Jaar',
+                  MONTH_PLURAL: 'Maanden',
+                  MONTH_SINGULAR: 'Maand',
+                  WEEK_PLURAL: 'Weken',
+                  WEEK_SINGULAR: 'Week',
+                  DAY_PLURAL: 'Dagen',
+                  DAY_SINGULAR: 'Dag',
+                  HOUR_PLURAL: 'Uren',
+                  HOUR_SINGULAR: 'Uur',
+                  MINUTE_PLURAL: 'Minuten',
+                  MINUTE_SINGULAR: 'Minuut',
+                  SECOND_PLURAL: 'Seconden',
+                  SECOND_SINGULAR: 'Seconde',
+                  MILLISECOND_PLURAL: 'Milliseconden',
+                  MILLISECOND_SINGULAR: 'Milliseconde'
+              };
+      
+              for (var key in locale) {
+                  if (!locale.hasOwnProperty(key)) { continue; }
+                  tick.setConstant(key, locale[key]);
+              }
+              */
+
+        // format of due date is ISO8601
+        // https://en.wikipedia.org/wiki/ISO_8601
+
+        // '2018-01-31T12:00:00'        to count down to the 31st of January 2018 at 12 o'clock
+        // '2019'                       to count down to 2019
+        // '2018-01-15T10:00:00+01:00'  to count down to the 15th of January 2018 at 10 o'clock in timezone GMT+1
+
+        var nextYear = new Date().getFullYear() + 1;
+
+        // create the countdown counter
+        var counter = Tick.count.down(nextYear + '-01-04T00:00:00+01:00');
+
+        counter.onupdate = function (value) {
+          tick.value = value;
+        };
+
+        counter.onended = function () {
+          // redirect, uncomment the next line
+          // window.location = 'my-location.html'
+          // hide counter, uncomment the next line
+          // tick.root.style.display = 'none';
+          // show message, uncomment the next line
+          // document.querySelector('.tick-onended-message').style.display = '';
+        };
+      }
+    </script>
   </body>
 </html>
